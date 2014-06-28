@@ -289,7 +289,7 @@ location, or within your logstash distribution in `lib/logstash/inputs/`.  For e
 
 ## Example kibana tracking ##
 
-The following shows an example of tracking the number of gets and sets being performed, the size of the cache, and the
+The following shows an example of tracking the number of get hits and misses that are occurring, the size of the cache, and the
 percentage hit effectiveness of the items in memcached:
 
 ![kibana dashboard](./kibana.png) 
