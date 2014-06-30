@@ -48,7 +48,8 @@ class LogStash::Inputs::MemcachedStats < LogStash::Inputs::Base
 
   public
   def register
-    fix_streaming_codecs
+    # not available in logstash 1.3.3
+    #fix_streaming_codecs
     require "socket"
     require "timeout"   
   end # def register
