@@ -289,8 +289,11 @@ location, or within your logstash distribution in `lib/logstash/inputs/`.  For e
 
 ## Example kibana tracking ##
 
-The following shows an example of tracking the number of get hits and misses that are occurring, the size of the cache, and the
-percentage hit effectiveness of the items in memcached:
+The following shows an example screenshot of a kibana dashboard the is tracking a 3 node memcached pool in production.
+
+The dashboard is tracking several memcached stats: `bytes_read`, `bytes_written`, `cmd_get`, `cmd_set`, `get_hits`, `get_misses`, `curr_items`, `expired_unfetched`, and two stats calculated by the memcached_stats plugin `hit_percent`, `gets_to_sets_percent`.
+
+With the dashboard we are to see, in real time, that one memcached instances is receiving considerably more traffic than the other nodes.  This is very indicative of a "hot keys" scenario (this is actually what it was - clarified by using memkeys on the host in question).  
 
 ![kibana dashboard](./kibana.png) 
 
